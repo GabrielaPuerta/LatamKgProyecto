@@ -1,4 +1,4 @@
-package co.edu.usbcali.LatamKG.service;
+package service;
 
 
 public class UsuarioServiceImplTest {

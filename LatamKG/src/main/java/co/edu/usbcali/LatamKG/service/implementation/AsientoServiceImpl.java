@@ -1,4 +1,4 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.Asiento;
 import co.edu.usbcali.LatamKG.domain.Reserva;
@@ -9,6 +9,7 @@ import co.edu.usbcali.LatamKG.repository.AsientoRepository;
 
 import co.edu.usbcali.LatamKG.repository.ReservaRepository;
 import co.edu.usbcali.LatamKG.repository.TipoAsientoRepository;
+import co.edu.usbcali.LatamKG.service.AsientoService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

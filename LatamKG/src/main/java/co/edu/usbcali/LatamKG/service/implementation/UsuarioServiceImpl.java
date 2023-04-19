@@ -1,4 +1,4 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.RolUsuario;
 import co.edu.usbcali.LatamKG.domain.Usuario;
@@ -7,6 +7,7 @@ import co.edu.usbcali.LatamKG.mapper.UsuarioMapper;
 import co.edu.usbcali.LatamKG.repository.RolUsuarioRepository;
 import co.edu.usbcali.LatamKG.repository.UsuarioRepository;
 
+import co.edu.usbcali.LatamKG.service.UsuarioService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

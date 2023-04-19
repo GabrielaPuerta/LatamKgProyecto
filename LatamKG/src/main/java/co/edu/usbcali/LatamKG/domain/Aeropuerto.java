@@ -16,8 +16,8 @@ public class Aeropuerto {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Integer aero_id;
+    @Column(nullable = false, name = "aero_id")
+    private Integer aeroId;
     @Column(nullable = false, length = 30)
     private String nombre;
     @Column(nullable = false, length = 1)

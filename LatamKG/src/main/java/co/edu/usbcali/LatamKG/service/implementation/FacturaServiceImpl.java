@@ -1,4 +1,4 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.Factura;
 import co.edu.usbcali.LatamKG.domain.Reserva;
@@ -6,6 +6,7 @@ import co.edu.usbcali.LatamKG.domain.Usuario;
 import co.edu.usbcali.LatamKG.repository.FacturaRepository;
 import co.edu.usbcali.LatamKG.repository.ReservaRepository;
 import co.edu.usbcali.LatamKG.repository.UsuarioRepository;
+import co.edu.usbcali.LatamKG.service.FacturaService;
 import lombok.extern.slf4j.Slf4j;
 import co.edu.usbcali.LatamKG.dto.FacturaDTO;
 import co.edu.usbcali.LatamKG.mapper.FacturaMapper;

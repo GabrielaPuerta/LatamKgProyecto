@@ -10,8 +10,8 @@ public class TrayectoMapper {
     public static TrayectoDTO domainToDTO(Trayecto trayecto) {
         return TrayectoDTO.builder()
                 .idTrayecto(trayecto.getIdTrayecto())
-                .idAeropuertoOrigen(Math.toIntExact(trayecto.getIdAeropuertoOrigen() != null ? trayecto.getIdAeropuertoOrigen().getAero_id() : null))
-                .idAeropuertoDestino(Math.toIntExact(trayecto.getIdAeropuertoDestino() != null ? trayecto.getIdAeropuertoDestino().getAero_id() : null))
+                .idAeropuertoOrigen(trayecto.getIdAeropuertoOrigen() != null ? trayecto.getIdAeropuertoOrigen().getAeroId() : null)
+                .idAeropuertoDestino(trayecto.getIdAeropuertoDestino() != null ? trayecto.getIdAeropuertoDestino().getAeroId() : null)
                 .idVuelo(trayecto.getIdVuelo().getIdVuelo())
                 .estado(trayecto.getEstado())
                 .build();

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class AeropuertoMapper {
     public static AeropuertoDTO domainToDto(Aeropuerto aeropuerto){
         return  AeropuertoDTO.builder()
-                .aero_id(aeropuerto.getAero_id())
+                .aero_id(aeropuerto.getAeroId())
                 .nombre(aeropuerto.getNombre())
                 .iata(aeropuerto.getIata())
                 .estado(aeropuerto.getEstado())
@@ -19,7 +19,7 @@ public class AeropuertoMapper {
 
     public  static Aeropuerto dtoToDomain(AeropuertoDTO aeropuertoDTO){
         return Aeropuerto.builder()
-               .aero_id(aeropuertoDTO.getAero_id() != null ? aeropuertoDTO.getAero_id() : null)
+               .aeroId(aeropuertoDTO.getAero_id() != null ? aeropuertoDTO.getAero_id() : null)
                 .nombre(aeropuertoDTO.getNombre())
                 .iata(aeropuertoDTO.getIata())
                 .estado(aeropuertoDTO.getEstado())

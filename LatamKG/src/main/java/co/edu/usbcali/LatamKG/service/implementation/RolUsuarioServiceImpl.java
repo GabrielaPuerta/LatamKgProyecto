@@ -1,9 +1,10 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.RolUsuario;
 import co.edu.usbcali.LatamKG.dto.RolUsuarioDTO;
 import co.edu.usbcali.LatamKG.mapper.RolUsuarioMapper;
 import co.edu.usbcali.LatamKG.repository.RolUsuarioRepository;
+import co.edu.usbcali.LatamKG.service.RolUsuarioService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @Slf4j
-public class RolUsuarioServiceImpl implements  RolUsuarioService {
+public class RolUsuarioServiceImpl implements RolUsuarioService {
     private final RolUsuarioRepository rolUsuarioRepository;
     private final ModelMapper modelMapper;
 

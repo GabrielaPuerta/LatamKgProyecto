@@ -1,9 +1,10 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.TipoAsiento;
 import co.edu.usbcali.LatamKG.dto.TipoAsientoDTO;
 import co.edu.usbcali.LatamKG.mapper.TipoAsientoMapper;
 import co.edu.usbcali.LatamKG.repository.TipoAsientoRepository;
+import co.edu.usbcali.LatamKG.service.TipoAsientoService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

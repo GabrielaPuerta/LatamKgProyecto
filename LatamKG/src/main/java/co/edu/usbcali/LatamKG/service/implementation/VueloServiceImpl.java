@@ -1,4 +1,4 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.Avion;
 import co.edu.usbcali.LatamKG.domain.Vuelo;
@@ -6,6 +6,7 @@ import co.edu.usbcali.LatamKG.dto.VueloDTO;
 import co.edu.usbcali.LatamKG.mapper.VueloMapper;
 import co.edu.usbcali.LatamKG.repository.AvionRepository;
 import co.edu.usbcali.LatamKG.repository.VueloRepository;
+import co.edu.usbcali.LatamKG.service.VueloService;
 import org.modelmapper.ModelMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

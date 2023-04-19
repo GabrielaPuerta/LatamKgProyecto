@@ -1,9 +1,10 @@
-package co.edu.usbcali.LatamKG.service;
+package co.edu.usbcali.LatamKG.service.implementation;
 
 import co.edu.usbcali.LatamKG.domain.Aeropuerto;
 import co.edu.usbcali.LatamKG.dto.AeropuertoDTO;
 import co.edu.usbcali.LatamKG.mapper.AeropuertoMapper;
 import co.edu.usbcali.LatamKG.repository.AeropuertoRepository;
+import co.edu.usbcali.LatamKG.service.AeropuertoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
