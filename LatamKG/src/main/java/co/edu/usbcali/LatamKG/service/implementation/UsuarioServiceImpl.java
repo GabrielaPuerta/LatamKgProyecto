@@ -13,6 +13,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -30,7 +31,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         if (usuarioDTO == null) {
             throw new Exception("El usuario no es valido!");
         }
-        if (usuarioDTO.getCedula() == null || usuarioDTO.getCedula().isBlank() || usuarioDTO.getNombre().trim().isEmpty()) {
+        if (usuarioDTO.getCedula() == null || usuarioDTO.getCedula().isBlank()) {
             throw new Exception("La cédula del usuario no es valida!");
         }
         if (usuarioDTO.getNombre() == null || usuarioDTO.getNombre().isBlank() || usuarioDTO.getNombre().trim().isEmpty()) {
@@ -45,13 +46,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         if (usuarioDTO.getEstado() == null || usuarioDTO.getEstado().isBlank() || usuarioDTO.getEstado().trim().isEmpty()) {
             throw new Exception("El estado del usuario no es valido!");
         }
-        if(usuarioRepository.findById(usuarioDTO.getIdRolUsuario()).isPresent()){
+        if(usuarioRepository.findById(usuarioDTO.getUsuaId()).isPresent()){
             throw new Exception(" id del usuario ya existente");
         }
         Usuario usuario = UsuarioMapper.dtoToDomain(usuarioDTO);
         RolUsuario rolUsuario = rolUsuarioRepository.findById(usuarioDTO.getIdRolUsuario()).get();
         usuario.setRolUsuario(rolUsuario);
-        return UsuarioMapper.domainToDTO(usuarioRepository.save(usuario));
+        Usuario usuarioGuardado = usuarioRepository.save(usuario);
+        return UsuarioMapper.domainToDTO(usuarioGuardado);
     }
     @Override
     public List<UsuarioDTO> obtenerUsuarios() {
@@ -59,10 +61,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
     @Override
     public UsuarioDTO obtenerUsuario(Integer id) throws Exception {
-        if (usuarioRepository.findById(id).isEmpty()) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        if (!usuario.isPresent()) {
             throw new Exception("El id " + id + " no corresponde a ningun usuario!");
         }
 
-        return UsuarioMapper.domainToDTO(usuarioRepository.findById(id).get());
+        return UsuarioMapper.domainToDTO(usuario.get());
     }
 }

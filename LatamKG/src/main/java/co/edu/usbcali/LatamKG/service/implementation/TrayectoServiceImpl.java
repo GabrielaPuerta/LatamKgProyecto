@@ -55,6 +55,7 @@ public class TrayectoServiceImpl implements TrayectoService {
     }
     @Override
     public List<TrayectoDTO> obtenerTrayectos() {
+
         return TrayectoMapper.domainToDTOList(trayectoRepository.findAll());
     }
 }

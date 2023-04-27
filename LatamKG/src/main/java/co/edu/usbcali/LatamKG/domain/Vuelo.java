@@ -21,13 +21,6 @@ public class Vuelo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "vuel_id", nullable = false, unique = true)
     private Integer idVuelo;
-    /*@ManyToOne
-    @JoinColumn(name = "origen", referencedColumnName = "aero_id")
-    private Aeropuerto idAeropuertoOrigen;
-    @ManyToOne
-    @JoinColumn(name = "destino", referencedColumnName = "aero_id")
-    private Aeropuerto idAeropuertoDestino;*/
-
     @OneToOne
     @JoinColumn(name = "avio_id", referencedColumnName = "avio_id")
     private Avion avion;
